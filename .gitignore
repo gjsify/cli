@@ -1,10 +1,8 @@
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
+*-debug.log
+*-error.log
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -78,9 +76,8 @@ typings/
 # Next.js build output
 .next
 
-# Nuxt.js build / generate output
+# Nuxt.js generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -102,3 +99,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Build output
+dist/
+lib/
+tmp/
+package-lock.json
