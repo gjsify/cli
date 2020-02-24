@@ -11,6 +11,7 @@ Command line tool for gjsify
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
+* [CommonJS compatibility](#commonjs-compatibility)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -19,7 +20,7 @@ $ npm install -g @gjsify/cli
 $ gjsify COMMAND
 running command...
 $ gjsify (-v|--version|version)
-@gjsify/cli/0.0.0 linux-x64 node-v12.14.1
+@gjsify/cli/0.0.1 linux-x64 node-v12.14.1
 $ gjsify --help [COMMAND]
 USAGE
   $ gjsify COMMAND
@@ -44,13 +45,13 @@ OPTIONS
   -h, --help                           show CLI help
   -m, --minimize                       Minimize build output
   -o, --outputFilename=outputFilename  [default: index.js] File name of the output bundle
-  -p, --outputPath=outputPath          [default: dist] Output destination path
+  -p, --outputPath=outputPath          [default: ./dist] Output destination path
 
 EXAMPLE
   $ gjsify build ./src/hello.ts
 ```
 
-_See code: [src/commands/build.ts](https://github.com/gjsify/cli/blob/v0.0.0/src/commands/build.ts)_
+_See code: [src/commands/build.ts](https://github.com/gjsify/cli/blob/v0.0.1/src/commands/build.ts)_
 
 ## `gjsify help [COMMAND]`
 

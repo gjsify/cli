@@ -1,7 +1,7 @@
 {
   "name": "@gjsify/cli",
   "description": "Command line tool for gjsify",
-  "version": "0.0.1",
+  "version": "0.0.1-b",
   "author": "Pascal Garber <pascal@artandcode.studio>",
   "bin": {
     "gjsify": "./bin/run"
@@ -9,6 +9,10 @@
   "bugs": "https://github.com/gjsify/cli/issues",
   "dependencies": {
     "@gjsify/console": "0.0.1",
+    "@gjsify/fs": "0.0.1",
+    "@gjsify/os": "0.0.1",
+    "@gjsify/path": "0.0.1",
+    "@gjsify/process": "0.0.1",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
@@ -19,8 +23,11 @@
     "crypto-browserify": "^3.12.0",
     "domain-browser": "^3.5.0",
     "events": "^3.1.0",
+    "inherits": "^2.0.4",
+    "json-loader": "^0.5.7",
     "punycode": "^2.1.1",
     "querystring-es3": "^0.2.1",
+    "stream-browserify": "^2.0.2",
     "string_decoder": "^1.3.0",
     "terser-webpack-plugin": "^2.3.5",
     "ts-loader": "^6.2.1",

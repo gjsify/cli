@@ -6,4 +6,5 @@ export interface BuildOptions {
   };
   beautify?: boolean;
   minimize?: boolean;
+  mangle?: boolean;
 }

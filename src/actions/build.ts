@@ -11,8 +11,11 @@ export class BuildAction {
   constructor(options: BuildOptions) {
     config.entry = options.entry || config.entry
     config.output.filename = options.output.filename || config.output.filename
-    config.output.path = options.output.path ? resolve(__dirname, options.output.path) : config.output.path
+    config.output.path = options.output.path ? resolve(process.cwd(), options.output.path) : config.output.path
+    config.optimization.minimize = typeof options.minimize === 'boolean' ? options.minimize : config.optimization.minimize
+
     minimizConfig.terserOptions.output.beautify = typeof options.beautify === 'boolean' ? options.beautify : minimizConfig.terserOptions.output.beautify
+    minimizConfig.terserOptions.mangle = typeof options.mangle === 'boolean' ? options.mangle : minimizConfig.terserOptions.mangle
 
     config.optimization.minimizer.push(new TerserPlugin(minimizConfig))
 

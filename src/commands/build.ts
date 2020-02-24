@@ -38,6 +38,11 @@ export default class Build extends Command {
       required: false,
       default: defaultFlags.minimize,
     }),
+    mangle: flags.boolean({
+      description: 'Mangle build output',
+      required: false,
+      default: defaultFlags.mangle,
+    }),
   }
 
   static args = [{name: 'file'}]
