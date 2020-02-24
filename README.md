@@ -20,7 +20,7 @@ $ npm install -g @gjsify/cli
 $ gjsify COMMAND
 running command...
 $ gjsify (-v|--version|version)
-@gjsify/cli/0.0.1 linux-x64 node-v12.14.1
+@gjsify/cli/0.0.1-b linux-x64 node-v12.14.1
 $ gjsify --help [COMMAND]
 USAGE
   $ gjsify COMMAND
@@ -46,12 +46,13 @@ OPTIONS
   -m, --minimize                       Minimize build output
   -o, --outputFilename=outputFilename  [default: index.js] File name of the output bundle
   -p, --outputPath=outputPath          [default: ./dist] Output destination path
+  --mangle                             Mangle build output
 
 EXAMPLE
   $ gjsify build ./src/hello.ts
 ```
 
-_See code: [src/commands/build.ts](https://github.com/gjsify/cli/blob/v0.0.1/src/commands/build.ts)_
+_See code: [src/commands/build.ts](https://github.com/gjsify/cli/blob/v0.0.1-b/src/commands/build.ts)_
 
 ## `gjsify help [COMMAND]`
 

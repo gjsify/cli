@@ -29,6 +29,7 @@ export const webpackConfigDefault = {
   plugins: [
     new webpack.ProvidePlugin({
       console: '@gjsify/console',
+      window: '@gjsify/globals',
       // process: '@gjsify/process',
       // Buffer: ['buffer', 'Buffer'],
       // TODO check https://webpack.js.org/configuration/node/
@@ -57,6 +58,8 @@ export const webpackConfigDefault = {
     minimizer: new Array<any>(),
   },
   resolve: {
+    symlinks: true,
+    // modules: ['node_modules', resolve(process.cwd(), 'node_modules'), resolve(__dirname, 'node_modules')],
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       assert: 'assert', // https://github.com/browserify/commonjs-assert

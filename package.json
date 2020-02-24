@@ -10,6 +10,7 @@
   "dependencies": {
     "@gjsify/console": "0.0.1",
     "@gjsify/fs": "0.0.1",
+    "@gjsify/globals": "0.0.1",
     "@gjsify/os": "0.0.1",
     "@gjsify/path": "0.0.1",
     "@gjsify/process": "0.0.1",
