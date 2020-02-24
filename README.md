@@ -28,28 +28,29 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`gjsify hello [FILE]`](#gjsify-hello-file)
+* [`gjsify build [FILE]`](#gjsify-build-file)
 * [`gjsify help [COMMAND]`](#gjsify-help-command)
 
-## `gjsify hello [FILE]`
+## `gjsify build [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ gjsify hello [FILE]
+  $ gjsify build [FILE]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -b, --beautify                       Beautify build output
+  -h, --help                           show CLI help
+  -m, --minimize                       Minimize build output
+  -o, --outputFilename=outputFilename  [default: index.js] File name of the output bundle
+  -p, --outputPath=outputPath          [default: dist] Output destination path
 
 EXAMPLE
-  $ gjsify hello
-  hello world from ./src/hello.ts!
+  $ gjsify build ./src/hello.ts
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/gjsify/cli/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/build.ts](https://github.com/gjsify/cli/blob/v0.0.0/src/commands/build.ts)_
 
 ## `gjsify help [COMMAND]`
 
@@ -68,3 +69,9 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
 <!-- commandsstop -->
+
+# CommonJS compatibility
+
+Many [npm](https://www.npmjs.com/) modules that don't do IO will just work after being browserified. Others take more work.
+
+When you require() any of these modules, you will get a gjs-specific shim:
